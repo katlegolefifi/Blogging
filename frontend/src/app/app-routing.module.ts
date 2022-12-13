@@ -6,6 +6,10 @@ import { HomeComponent } from './home/home.component';
 import { RegisterComponent} from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { AboutComponent } from './about/about.component';
+import { ViewpostComponent } from './viewpost/viewpost.component';
+import { ViewposttwoComponent } from './viewposttwo/viewposttwo.component';
+import { ViewpostthreeComponent } from './viewpostthree/viewpostthree.component';
+import { ViewpostfourComponent } from './viewpostfour/viewpostfour.component';
 
 
 const routes: Routes = [
@@ -14,7 +18,11 @@ const routes: Routes = [
   {path: 'contact', component: ContactComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'about', component: AboutComponent}
+  {path: 'about', component: AboutComponent},
+  {path: 'viewpost', component: ViewpostComponent},
+  {path: 'viewposttwo', component: ViewposttwoComponent},
+  {path: 'viewpostthree', component: ViewpostthreeComponent},
+  {path: 'viewpostfour', component: ViewpostfourComponent}
 ];
 
 @NgModule({

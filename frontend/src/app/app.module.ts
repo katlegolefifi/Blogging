@@ -13,6 +13,10 @@ import { LoginComponent } from './login/login.component';
 import { RouterModule } from '@angular/router';
 import { NgToastModule } from 'ng-angular-popup';
 import { AboutComponent } from './about/about.component';
+import { ViewpostComponent } from './viewpost/viewpost.component';
+import { ViewposttwoComponent } from './viewposttwo/viewposttwo.component';
+import { ViewpostthreeComponent } from './viewpostthree/viewpostthree.component';
+import { ViewpostfourComponent } from './viewpostfour/viewpostfour.component';
 
 
 
@@ -25,7 +29,11 @@ import { AboutComponent } from './about/about.component';
       ContactComponent,
       RegisterComponent,
       LoginComponent,
-      AboutComponent
+      AboutComponent,
+      ViewpostComponent,
+      ViewposttwoComponent,
+      ViewpostthreeComponent,
+      ViewpostfourComponent
    ],
   imports: [
     BrowserModule,
