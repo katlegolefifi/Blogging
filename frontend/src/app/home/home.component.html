@@ -5,10 +5,9 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="#!">Contact</a></li>
-                <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" [routerLink]="['/blog']" routerLinkActive="router-link-active"  href="#">Blog</a></li>
+                <li class="nav-item"><a class="nav-link"    [routerLink]="['/about']" routerLinkActive="router-link-active" href="#!">About</a></li>
+                <li class="nav-item"><a class="nav-link" [routerLink]="['/contact']" routerLinkActive="router-link-active" href="#!">Contact</a></li>
             </ul>
         </div>
     </div>
@@ -47,7 +46,7 @@
                             <div class="small text-muted">January 20, 2022</div>
                             <h2 class="card-title h4">how does it feel to grow up with a hearing loss as a kid?</h2>
                             <p class="card-text">Most grown-ups think that childhood is the best time of one's life. Most children, on the other hand, say that it’s tough being a child. And children with hearing loss may experience an even tougher time growing up .</p>
-                            <a class="btn btn-primary" href="#!">Read more →</a>
+                            <a class="btn btn-primary "    [routerLink]="['/blog']" routerLinkActive="router-link-active" >Read more →</a>
                         </div>
                     </div>
                     <!-- Blog post-->

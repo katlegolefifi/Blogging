@@ -8,43 +8,50 @@
             <div class="card-body p-5">
               <h2 class="text-uppercase text-center mb-5">Create an account</h2>
 
-              <form>
+              <form [formGroup]="registerForm"   class="register">
 
                 <div class="form-outline mb-4">
-                  <input type="firstname" id="form3Example1cg" class="form-control form-control-lg" />
-                  <label class="form-label" for="form3Example1cg">Your First name</label>
-                </div>
-
-                
-                <div class="form-outline mb-4">
-                    <input type="lastname" id="form3Example1cg" class="form-control form-control-lg" />
-                    <label class="form-label" for="form3Example1cg">Your Last name</label>
+                  <input formControlName="firstname" type="text"  class="form-control form-control-lg"  placeholder="First name"/>
+                  <div *ngIf="f.firstname.touched && f.firstname.invalid" class="alert alert-danger">
+                    <div *ngIf="f.firstname.errors?.['required']">First name is required.</div>  
                   </div>
-
-                <div class="form-outline mb-4">
-                  <input type="email" id="form3Example3cg" class="form-control form-control-lg" />
-                  <label class="form-label" for="form3Example3cg">Your Email</label>
                 </div>
 
                 <div class="form-outline mb-4">
-                  <input type="password" id="form3Example4cg" class="form-control form-control-lg" />
-                  <label class="form-label" for="form3Example4cg">Password</label>
+                  <input formControlName = "lastname"type="text" class="form-control form-control-lg"  placeholder="Last name"/>
+                  <div *ngIf="f.lastname.touched && f.lastname.invalid" class="alert alert-danger">
+                    <div *ngIf="f.lastname.errors?.['required']">Last name is required.</div>  
+                    </div>
                 </div>
 
                 <div class="form-outline mb-4">
-                  <input type="password" id="form3Example4cdg" class="form-control form-control-lg" />
-                  <label class="form-label" for="form3Example4cdg">Repeat your password</label>
+                  <input formControlName = "email" type="email" class="form-control form-control-lg" placeholder="Email" />
+                  <div *ngIf="f.email.touched && f.email.invalid" class="alert alert-danger">
+                    <div *ngIf="f.email.errors?.['required']">Email is required.</div>
+                    <div *ngIf="f.email.errors?.['email']">Please enter valid email address.</div>
+                  </div>
                 </div>
 
-                
+                <div class="form-outline mb-4">
+                  <input formControlName = "password"type="password" class="form-control form-control-lg" placeholder="Password"/>
+                  <div *ngIf="f.password.touched && f.password.invalid" class="alert alert-danger">
+                    <div *ngIf="f.password.errors?.['required']">Password is required.</div>
+                   </div>
+                </div>
+
+                <div class="form-outline mb-4">
+                  <input formControlName = "repeatpassword" type="password"  class="form-control form-control-lg" placeholder="Repeat password"/>
+                  <div *ngIf="f.repeatpassword.touched && f.repeatpassword.invalid" class="alert alert-danger">
+                    <div *ngIf="f.repeatpassword.errors?.['required']">Repeat Password is required.</div>
+                   </div>
+                </div>
 
                 <div class="d-flex justify-content-center">
-                  <button type="button"
-                    class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Register</button>
+                    <button  (click)="register()"  [routerLink]="['/home']" routerLinkActive="router-link-active" type="button" class="btn1 btn-success btn-lg">Register</button>
                 </div>
 
                 <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="#!"
-                    class="fw-bold text-body"><u>Login here</u></a></p>
+                    class="fw-bold text-body" [routerLink]="['/login']"><u>Login here</u></a></p>
 
               </form>
 
