@@ -17,6 +17,9 @@ import { ViewpostComponent } from './viewpost/viewpost.component';
 import { ViewposttwoComponent } from './viewposttwo/viewposttwo.component';
 import { ViewpostthreeComponent } from './viewpostthree/viewpostthree.component';
 import { ViewpostfourComponent } from './viewpostfour/viewpostfour.component';
+import { AdminComponent } from './admin/admin.component';
+import { UploadComponent } from './upload/upload.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 
@@ -33,7 +36,10 @@ import { ViewpostfourComponent } from './viewpostfour/viewpostfour.component';
       ViewpostComponent,
       ViewposttwoComponent,
       ViewpostthreeComponent,
-      ViewpostfourComponent
+      ViewpostfourComponent,
+      AdminComponent,
+      UploadComponent,
+      ProfileComponent
    ],
   imports: [
     BrowserModule,

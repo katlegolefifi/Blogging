@@ -41,7 +41,7 @@ export class LoginComponent implements OnInit {
       console.log('Login successsfull');
       this.toastservice.success({detail:'Success', summary:'Successfully login!', sticky:false,position:'tr', duration:6000})
   
-      this.router.navigate(['/blog']);
+      this.router.navigate(['/admin']);
       sessionStorage.setItem('logginToken', data.token)
       sessionStorage.setItem('loggedEmail', this.decoded.email);
   

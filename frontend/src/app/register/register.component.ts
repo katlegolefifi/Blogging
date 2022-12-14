@@ -40,7 +40,7 @@ export class RegisterComponent {
     this.userService.registerUser(this.registerForm.value).subscribe((data:any)=>{
       console.log('user added');
 
-      this.router.navigate(['/home']);
+      this.router.navigate(['/admin']);
       
     })
 

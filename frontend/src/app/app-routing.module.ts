@@ -10,6 +10,8 @@ import { ViewpostComponent } from './viewpost/viewpost.component';
 import { ViewposttwoComponent } from './viewposttwo/viewposttwo.component';
 import { ViewpostthreeComponent } from './viewpostthree/viewpostthree.component';
 import { ViewpostfourComponent } from './viewpostfour/viewpostfour.component';
+import { AdminComponent } from './admin/admin.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 const routes: Routes = [
@@ -22,7 +24,9 @@ const routes: Routes = [
   {path: 'viewpost', component: ViewpostComponent},
   {path: 'viewposttwo', component: ViewposttwoComponent},
   {path: 'viewpostthree', component: ViewpostthreeComponent},
-  {path: 'viewpostfour', component: ViewpostfourComponent}
+  {path: 'viewpostfour', component: ViewpostfourComponent},
+  {path: 'admin', component: AdminComponent},
+  {path: 'profile', component: ProfileComponent}
 ];
 
 @NgModule({
